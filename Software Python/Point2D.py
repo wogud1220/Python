@@ -29,4 +29,4 @@ class Point4D(Point3D):
     def print(self):
         print("(X, Y, Z, W) =", self.x, self.y, self.z, self.w)
     def distanceTo(self, point):
-        dx = self.x - point.y
+        dx = self.x - point.x
