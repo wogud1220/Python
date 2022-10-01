@@ -11,7 +11,7 @@ class Point2D():
         dy = self.y - point.y
         return math.sqrt(dx*dx + dy*dy)
 
-class Point3D(Point2D):
+class Point3D(Point2D): 
     def __init__(self, x, y, z):
         super().__init__(x,y)
         self.z=z
