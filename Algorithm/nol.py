@@ -18,3 +18,7 @@ if(child=='네'):
     ((number-child1)*30000 + child1*10000) -int((((number-child1)*30000 + child1*10000)*child1*10/100)),'입니다.')
 else:
     print('아이가 없으시군요~ 알겠습니다.')
+
+    
+기구 리스트 생성
+자녀의 키, 몸무게, 기구제한
