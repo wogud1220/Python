@@ -13,5 +13,8 @@ if(child=='네'):
     child1=input('아이 1명당 10% 할인이 됩니다. 아이가 몇 명인가요?\n')
     child1=int(child1)
     print('아이가',child1,'명 이므로',child1*10,'% 할인이 됩니다.')
-    print('가격은 총',(number-child1)*30000 + child1*10000,'원에서 할인하여')
-   # print('총
+    sale=float(child1*10/100)
+    print('가격은 총',(number-child1)*30000 + child1*10000,'원에서 할인하여',
+    ((number-child1)*30000 + child1*10000) -int((((number-child1)*30000 + child1*10000)*child1*10/100)),'입니다.')
+else:
+    print('아이가 없으시군요~ 알겠습니다.')
