@@ -1,7 +1,3 @@
-import turtle
-t = turtle.Turtle()
-i = 1
-while i <= 4:
-    t.forward(100)
-    t.left(90)
-    i = i + 1
+int(input('상명랜드에 오신 것을 환영합니다~!\n\
+ 1.바이킹\n 2.롤러코스터\n 3.자이로드롭\n 4.번지점프\n 5.회전목마\n\
+ 6.범퍼카\n 7.귀신의 집\n 중에서 타고 싶은 놀이기구를 선택하세요.\n'))
