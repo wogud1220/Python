@@ -31,57 +31,10 @@ if(1 <= child1 and (nol_want==1 or 2 or 3 or 4)):
     for i in range(1,child1+1,1):
         height=int(input('%d째 아이의 키: '%i))
         weight=int(input('%d째 아이의 몸무게: '%i))
+        if(height<=120 or weight<=25):
+            print('아이의 신체조건이 맞지 않아 탈 수 없습니다. ')
+           
 
-               
-import turtle as t
-
-t.hideturtle()
-t.penup()
-t.setpos(0,-390)
-t.pendown()
-t.write("매표소 (현재위치)", move=False, align="center", font=("arial",20,"bold"))
-
-t.penup()
-t.setpos(300,-350)
-t.pendown()
-t.write("바이킹", move=False, align="center", font=("arial",20,"bold"))
-
-t.penup()
-t.setpos(300,-150)
-t.pendown()
-t.write("롤러코스터", move=False, align="center", font=("arial",20,"bold"))
-
-t.penup()
-t.setpos(200,200)
-t.pendown()
-t.write("자이로드롭", move=False, align="center", font=("arial",20,"bold"))
-
-t.penup()
-t.setpos(-100,300)
-t.pendown()
-t.write("번지점프", move=False, align="center", font=("arial",20,"bold"))
-
-t.penup()
-t.setpos(-350,200)
-t.pendown()
-t.write("회전 목마", move=False, align="center", font=("arial",20,"bold"))
-
-t.penup()
-t.setpos(-400,50)
-t.pendown()
-t.write("범퍼카", move=False, align="center", font=("arial",20,"bold"))
-
-t.penup()
-t.setpos(-350,-200)
-t.pendown()
-t.write("귀신의 집", move=False, align="center", font=("arial",20,"bold"))
-t.penup()
-
-t.setpos(0,-390)
-t.shape('circle')
-t.pendown()
-t.showturtle()
-    
     
 #print('네 그러면 먼저', dic[(nol_want)], '쪽으로 안내해드리겠습니다.')
 
