@@ -1,5 +1,6 @@
 import turtle as t
 
+print(number)
 t.hideturtle()
 t.penup()
 t.setpos(0,-390)
