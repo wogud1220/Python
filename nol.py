@@ -15,15 +15,14 @@ if(child=='네'):
     print('가격은 총',(number-child1)*30000 + child1*10000,'원에서 할인하여',
     ((number-child1)*30000 + child1*10000) -
     int((((number-child1)*30000 + child1*10000)*child1*10/100)),'입니다.\n\n')
-    print('상명랜드에 오신 것을 환영합니다~!\n\
+    print('상명랜드에 오신 것을 다시 한번 환영합니다~!\n\
  1.바이킹\n 2.롤러코스터\n 3.자이로드롭\n 4.번지 점프\n 5.회전 목마\n\
- 6.범퍼카\n 7.귀신의 집\n 중에서 제일 먼저 타고 싶은 놀이기구의 번호를 입력하세요.\n')
+ 6.범퍼카\n 7.귀신의 집\n 등 다양한 놀이기구가 있습니다!!\n')
     nol_choice=[]
-    for j in range(4):
-        nol_turn=int(input('타고 싶은 놀이기구를 입력하고 엔터를 누르세요\n'))
-        if(nol_turn<=7):
-            nol_choice.append(nol_turn)
-            print(nol_choice)
+    for j in range(1,5,1):
+        nol_turn=int(input('%d번째로 타고 싶은 놀이기구를 입력하고 엔터를 누르세요\n' %j))
+        nol_choice.append(nol_turn)
+        print(nol_turn,dic[nol_turn],'\n','순서 :',nol_choice)
         
     if(1 <= child1 and ((nol_choice[0] or nol_choice[1] or nol_choice[2] or nol_choice[3])
                         ==1 or 2 or 3 or 4)):
@@ -37,6 +36,8 @@ if(child=='네'):
                 continue
             else:
                 print('\n아이들의 신체조건을 모두 입력받았습니다.')
+        else:
+            print('\n아이들의 신체조건을 모두 입력받았습니다. 가는 길을 알려드리겠습니다.')
     
 
                 
@@ -97,7 +98,8 @@ t.pensize(3)
 
 k=0
 n=0
-while(n<4):
+while(n<5):
+    t.color('black')
     if(nol_choice[k]==1):
         t.goto(300,-350)
     elif(nol_choice[k]==2):
@@ -112,6 +114,8 @@ while(n<4):
         t.goto(300,50)
     elif(nol_choice[k]==7):
         t.goto(-350, -200)
+    t.color('red')
+    t.write(n+1, move=True, align="left", font=("arial",20,"bold"))
     k+=1
     n+=1
 
