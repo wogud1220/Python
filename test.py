@@ -4,7 +4,7 @@ nol_want=int(input('상명랜드에 오신 것을 환영합니다~!\n\
 
 nol_sunseo=[]
 for j in range(4):
-    nol_turn=int(input('타고 싶은 놀이기구를 입력하고 엔터를 누르세요'))
+    nol_turn=int(input('타고 싶은 놀이기구를 입력하고 엔터를 누르세요\n'))
     nol_sunseo.append(nol_turn)
 
 print(nol_sunseo)
