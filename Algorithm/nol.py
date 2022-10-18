@@ -33,7 +33,7 @@ if(child=='네'):
             height=int(input('%d째 아이의 키: '%i))
             weight=int(input('%d째 아이의 몸무게: '%i))
             if(height <= 100 or weight <= 25):
-                print('아이의 신체조건이 맞지 않습니다.')
+                print('아이의 신체조건이 맞지 않습니다. 다시 입력해주세요.')
                 continue
             i=i+1
         else:
@@ -43,6 +43,14 @@ if(child=='네'):
                 
 elif(child=='아니오'):
     print('아이가 없으시군요~ 알겠습니다.\n')
+    print('상명랜드에 오신 것을 다시 한번 환영합니다~!\n\
+ 1.바이킹\n 2.롤러코스터\n 3.자이로드롭\n 4.번지 점프\n 5.회전 목마\n\
+ 6.범퍼카\n 7.귀신의 집\n 등 다양한 놀이기구가 있습니다!!\n')
+    nol_choice=[]
+    for j in range(1,5,1):
+        nol_turn=int(input('%d번째로 타고 싶은 놀이기구를 입력하고 엔터를 누르세요\n' %j))
+        nol_choice.append(nol_turn)
+        print(nol_turn,dic[nol_turn],'\n','순서 :',nol_choice)
 
 
 import turtle as t
@@ -109,7 +117,7 @@ while(n<5):
     elif(nol_choice[k]==4):
         t.goto(-100,300)
     elif(nol_choice[k]==5):
-        t.goto(-350,-200)
+        t.goto(-350,200)
     elif(nol_choice[k]==6):
         t.goto(300,50)
     elif(nol_choice[k]==7):
