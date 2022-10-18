@@ -115,7 +115,7 @@ while(n<5):
     elif(nol_choice[k]==7):
         t.goto(-350, -200)
     t.color('red')
-    t.write(n+1, move=True, align="left", font=("arial",30,"bold"))
+    t.write(n+1, move=True, align="left", font=("arial",20,"bold"))
     k+=1
     n+=1
 
