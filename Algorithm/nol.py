@@ -1,3 +1,4 @@
+i=1
 dic={1:'바이킹',2:' 롤러코스터', 3: '자이로드롭', 4: '번지 점프', 5: '회전 목마',\
     6:'범퍼카', 7: '귀신의 집'}
 number=int(input('안녕하세요 놀이공원에 오신 것을 환영합니다\n \n몇 명이서 오셨나요?\n'))
@@ -28,14 +29,13 @@ if(child=='네'):
                         ==1 or 2 or 3 or 4)):
         print('죄송하지만 고객님이 타시려는 놀이기구들은 키와 몸무게 제한이 있는\
 놀이기구 입니다.\n 키:100cm 초과, 몸무게는 25kg 초과할 것\n 아이의 키와 몸무게를 입력해주시겠어요?')
-        for i in range(1,child1+1,1):
+        while(i<=child1):
             height=int(input('%d째 아이의 키: '%i))
             weight=int(input('%d째 아이의 몸무게: '%i))
             if(height <= 100 or weight <= 25):
                 print('아이의 신체조건이 맞지 않습니다.')
                 continue
-            else:
-                print('\n아이들의 신체조건을 모두 입력받았습니다.')
+            i=i+1
         else:
             print('\n아이들의 신체조건을 모두 입력받았습니다. 가는 길을 알려드리겠습니다.')
     
@@ -115,7 +115,7 @@ while(n<5):
     elif(nol_choice[k]==7):
         t.goto(-350, -200)
     t.color('red')
-    t.write(n+1, move=True, align="left", font=("arial",20,"bold"))
+    t.write(n+1, move=True, align="left", font=("arial",30,"bold"))
     k+=1
     n+=1
 
