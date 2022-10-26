@@ -59,13 +59,18 @@ elif(child=='아니오'):
 
 print('네 여기 약도 그려드렸습니다. 받으시고 즐거운 시간 되시길 바랍니다~')
 
-import turtle
-scr = turtle.Screen()
-scr.setup(100,100)
-scr.bgpic("smu.gif")
-scr.update()
 
+import turtle
 t=turtle.Turtle()
+
+s=turtle.Screen()
+s.setup(width = 1400, height = 850)
+image="smuuu.gif"   #배경
+image2="smuu.gif"  #수뭉이
+s.bgpic(image)
+s.addshape(image)
+s.addshape(image2)
+
 
 t.hideturtle()
 t.penup()
@@ -76,41 +81,41 @@ t.write("매표소 (현재위치)", move=False, align="center", font=("arial",20
 t.penup()
 t.setpos(200,-250)
 t.pendown()
-t.write("바이킹", move=False, align="center", font=("arial",15,"bold"))
+t.write("바이킹", move=False, align="center", font=("arial",20,"bold"))
 
 t.penup()
 t.setpos(250,0)
 t.pendown()
-t.write("롤러코스터", move=False, align="center", font=("arial",15,"bold"))
+t.write("롤러코스터", move=False, align="center", font=("arial",20,"bold"))
 
 t.penup()
 t.setpos(150,200)
 t.pendown()
-t.write("자이로드롭", move=False, align="center", font=("arial",15,"bold"))
+t.write("자이로드롭", move=False, align="center", font=("arial",20,"bold"))
 
 t.penup()
 t.setpos(-100,250)
 t.pendown()
-t.write("번지점프", move=False, align="center", font=("arial",15,"bold"))
+t.write("번지점프", move=False, align="center", font=("arial",20,"bold"))
 
 t.penup()
 t.setpos(-250,150)
 t.pendown()
-t.write("회전 목마", move=False, align="center", font=("arial",15,"bold"))
+t.write("회전 목마", move=False, align="center", font=("arial",20,"bold"))
 
 t.penup()
 t.setpos(-300,0)
 t.pendown()
-t.write("범퍼카", move=False, align="center", font=("arial",15,"bold"))
+t.write("범퍼카", move=False, align="center", font=("arial",20,"bold"))
 
 t.penup()
 t.setpos(-250,-150)
 t.pendown()
-t.write("귀신의 집", move=False, align="center", font=("arial",15,"bold"))
+t.write("귀신의 집", move=False, align="center", font=("arial",20,"bold"))
 t.penup()
 
 t.setpos(0,-190)
-t.shape('circle')
+t.shape(image2)
 t.pendown()
 t.showturtle()
 
@@ -119,7 +124,7 @@ t.pensize(3)
 k=0
 n=0
 while(n<4):
-    t.color('black')
+    t.color('blue')
     if(nol_choice[k]==1):
         t.goto(200,-250)
     elif(nol_choice[k]==2):
@@ -135,11 +140,14 @@ while(n<4):
     elif(nol_choice[k]==7):
         t.goto(-250, -150)
     t.color('red')
-    t.write(n+1, move=True, align="left", font=("arial",30,"bold"))
+    t.write(n+1, move=False, align="left", font=("arial",30,"bold"))
     k+=1
     n+=1
 
     
 #print('네 그러면 먼저', dic[(nol_want)], '쪽으로 안내해드리겠습니다.')'''
+
+
+
 
 

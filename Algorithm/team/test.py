@@ -65,8 +65,8 @@ t=turtle.Turtle()
 
 s=turtle.Screen()
 s.setup(width = 1400, height = 850)
-image="smuuu.gif"
-image2="smuu.gif"  #배경
+image="smuuu.gif"   #배경
+image2="smuu.gif"  #수뭉이
 s.bgpic(image)
 s.addshape(image)
 s.addshape(image2)
