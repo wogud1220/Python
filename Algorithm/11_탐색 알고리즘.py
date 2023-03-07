@@ -7,3 +7,4 @@ for i in range(len(v)):
 
 else:
     print('%d를 리스트에서 찾을 수 없습니다.' %n)
+
