@@ -1,2 +1,1 @@
-a='python'
-print(a*2)
+i=int(input())
