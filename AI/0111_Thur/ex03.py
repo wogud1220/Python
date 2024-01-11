@@ -28,24 +28,19 @@ data = {
 # 입력 특성과 레이블을 
 
 features = np.array([data["age"], data["gender"]]).T
+#label = [0 1 2 3 4 ````]
 labels = np.array(data["category"])
-print(labels)
-# 모델 정의
-model = Sequential([
-    Dense(10, activation='relu', input_shape=(2,)),
-    Dense(len(interest), activation='softmax')
-])
 
-
-'''model = Sequential()
-model.add(Dense(10, activation='relu', input_shape=(2,)))
-model.add(Dense(len(interest), activation='softmax'))'''
+#모델 생성, 정의
+model = Sequential()
+model.add(Dense(20, activation='relu', input_shape=(2,)))
+model.add(Dense(len(interest), activation='softmax'))
 
 # 모델을 컴파일합니다.
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 # 모델을 훈련합니다.
-model.fit(features, labels,batch_size=1,epochs=2000, verbose=1)
+model.fit(features, labels, batch_size=1,epochs=2000, verbose=1)
 while 1:
 # 사용자 입력을 받습니다.
     age = int(input("나이를 입력하세요 (10~50): "))
