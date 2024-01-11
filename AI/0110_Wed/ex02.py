@@ -22,7 +22,7 @@ x_train = x_train[index]
 y_train = y_train[index]
 
 #1차원 배열은 학습시킬 수 없음, 2차원으로 만들어야함
-x_train = x_train.reshape(-1,1)#왼쪽행의 갯수, 열의 갯수 = 한줄로 길게 만들겠다.
+#x_train = x_train.reshape(-1,1)#왼쪽행의 갯수, 열의 갯수 = 한줄로 길게 만들겠다.
 #print(x_train)
 
 
