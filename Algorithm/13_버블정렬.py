@@ -8,3 +8,6 @@ for i in range(len(v)-1, 0, -1):
             v[j], v[j+1] = v[j+1], v[j]
 
 print('정렬 후:',v)
+
+
+
