@@ -4,7 +4,7 @@ class State:
         self.moves = moves
         self.goal = goal
 
-  # i1과 i2를 교환하여서 새로운 상태를 반환한다. 
+# i1과 i2를 교환하여서 새로운 상태를 반환한다. 
     def get_new_board(self, i1, i2, moves):
         new_board = self.board[:]
         new_board[i1], new_board[i2] = new_board[i2], new_board[i1]
