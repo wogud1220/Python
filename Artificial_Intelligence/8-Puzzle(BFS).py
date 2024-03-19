@@ -46,15 +46,15 @@ open_queue.append(State(puzzle, goal))
 closed_queue = [ ]
 moves = 0
 while len(open_queue) != 0: 
-  current = open_queue.pop(0)		# OPEN 리스트의 앞에서 삭제
-  print(current)
-  if current.board == goal:
-      print("탐색 성공")
-      break
-  moves = current.moves+1
-  closed_queue.append(current)		
-  for state in current.expand(moves):
-      if (state in closed_queue) or (state in open_queue):	# 이미 거쳐간 노드이면
-          continue				# 노드를 버린다.      
-      else: 
-          open_queue.append(state)
+    current = open_queue.pop(0)		# OPEN 리스트의 앞에서 삭제
+    print( current)
+    if current.board == goal:
+        print("탐색 성공")
+        break
+    moves = current.moves+1
+    closed_queue.append(current)		
+    for state in current.expand(moves):
+        if (state in closed_queue) or (state in open_queue):	# 이미 거쳐간 노드이면
+            continue				# 노드를 버린다.      
+        else: 
+            open_queue.append(state)
