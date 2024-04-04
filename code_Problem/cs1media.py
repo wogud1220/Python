@@ -94,7 +94,7 @@ def load_picture(filename = None):
   Opens file-chooser if no file name given."""
   if not filename:
     filename = _easygui.fileopenbox("Select an image", 
-                                    _sys.argv[0], '*', 
+                                    _sys.argv[0], '*',
                                     [ [ "*.jpg", "*.png", "*.bmp", "*.gif",
                                         "Image files" ] ])
     if not filename: 
