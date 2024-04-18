@@ -14,9 +14,11 @@ class State:
         result = []
         i = self.board.index(0)		# 숫자 0(빈칸)의 위치를 찾는다. 
         if not i in [0, 1, 2] :		# UP 연산자 
-            result.append(self.get_new_board(i, i-3, moves))
+            result.append(self.get_new_board(i, i-3, moves)) # 0이 맨 윗줄에 없다면 Index-3(위로 1칸 올리기)를 한다.
+            
         if not i in [0, 3, 6] :		# LEFT 연산자 
             result.append(self.get_new_board(i, i-1, moves))
+        
         if not i in [2, 5, 8]:		# RIGHT 연산자 
             result.append(self.get_new_board(i, i+1, moves))
         if not i in [6, 7, 8]:		# DOWN 연산자 
