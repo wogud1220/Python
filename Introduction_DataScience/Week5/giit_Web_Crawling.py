@@ -20,7 +20,7 @@ def get_url(url1):
     print()
     with open('git_url.txt','a') as f:
         for td in repo_names:
-            text = td.get_text(strip = True)
+            text = td.get_text(strip = True) #true 앞뒤 공백 지우기
             print(text)
             f.write(text + '\n')
         repo_names = soup.find_all('div', class_='Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned')
